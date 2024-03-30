@@ -10,7 +10,7 @@ class Users(users_pb2_grpc.UsersServicer):
         return users_pb2.GetUsersResponse(users=[
             users_pb2.User(
                 id='1',
-                name='John Doe',
+                name='Barzan Saeedpour',
                 email = 'barzansaeedpour@gmail.com',
                 password ='123'
             )
