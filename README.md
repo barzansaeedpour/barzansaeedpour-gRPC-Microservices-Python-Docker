@@ -1,14 +1,22 @@
 
 
+# gRPC Microservices with Python and Docker
+
+# Table of contents
+* [What is gRPC](#what-is-grpc)
+* [What is a Microservice](#what-is-a-microservice)
+* [How to run this project](#how-to-run-this-project)
+* [How to generate the gRPC codes](#how-to-generate-the-grpc-codes)
 
 
-## Server:
+## What is gRPC
 
-- python -m grpc_tools.protoc -I./protos --python_out=. --pyi_out=. --grpc_python_out=. ./protos/users.proto
+## What is a Microservice
 
-## How to run:
 
-* Open two distinct terminals (One for server and another one for client)
+## How to run this project
+
+* Open two distinct terminals (One for the server and another one for the client)
 * In the server terminal:
     * `pip install -r requirements`
     * `python app.py`
@@ -26,3 +34,8 @@ email: "barzansaeedpour@gmail.com"
 password: "123"
 ]
 ```
+
+## How to generate the gRPC codes
+
+- In the server terminal:
+    - `python -m grpc_tools.protoc -I./protos --python_out=. --pyi_out=. --grpc_python_out=. ./protos/users.proto`
