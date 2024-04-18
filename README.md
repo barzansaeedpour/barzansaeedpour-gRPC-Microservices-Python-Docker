@@ -53,7 +53,17 @@ password: "123"
 ]
 ```
 
-## How to generate the gRPC codes
+## How to create this project from scratch
 
-- In the server terminal:
-    - `python -m grpc_tools.protoc -I./protos --python_out=. --pyi_out=. --grpc_python_out=. ./protos/users.proto`
+1) Create two folders (server and client)
+2) Open two terminals for each
+4) Create and activate two virtual environments inside of each
+5) Install the dependencies:
+   - `pip install grpcio grpcio-tools`
+6) Create a protos folder and `users.protos` file inside of it for the server
+7) Generate the gRPC codes
+   - `python -m grpc_tools.protoc -I./protos --python_out=. --pyi_out=. --grpc_python_out=. ./protos/users.proto`
+8) Copy the generated files (grpc files) to Client as well
+9) Write the codes in app.py files for server and client
+10) Run the app.py for the server and then for the client
+    
